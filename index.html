@@ -3,56 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>North Star Bakery - Home</title>
+    <title>North Star Bakery | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header>
-        <img src="bakery-logo.png" alt="North Star Bakery logo">
+<header>
+    <img src="bakery-logo.png" alt="North Star Bakery logo">
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section>
         <h1>Welcome to North Star Bakery</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <p>
+            North Star Bakery is a neighborhood bakery that makes fresh,
+            handmade breads, pastries, and cakes for our local community.
+        </p>
 
-    <main>
-        <section>
-            <h2>Fresh From Our Bakery</h2>
-            <p>North Star Bakery is a neighborhood bakery that makes fresh breads, pastries, and cakes for our local community. We want every customer to feel welcome when they visit us.</p>
-        </section>
+        <img src="bakery-storefront.jpg"
+             alt="Front of the North Star Bakery storefront">
+    </section>
 
-        <section>
-            <h2>What We're Known For</h2>
-            <p>We are known for our fresh breads, homemade pastries, and decorated cakes. We make our products with care and use quality ingredients.</p>
-        </section>
+    <section>
+        <h2>What We Are Known For</h2>
+        <p>
+            We are known for fresh ingredients, homemade recipes, and
+            friendly service. Our bakery is a place where neighbors,
+            families, and visitors can enjoy something special.
+        </p>
+    </section>
 
-        <section>
-            <h2>Featured Item of the Week</h2>
-            <picture>
-                <source media="(min-width: 800px)" srcset="bakery-feature-large.jpg">
-                <source media="(max-width: 799px)" srcset="bakery-feature-small.jpg">
-                <img src="bakery-feature-small.jpg" alt="Featured bakery item displayed at North Star Bakery">
-            </picture>
-            <p>Our featured item this week is a fresh bakery favorite. Stop by to see what is available or contact us to ask about pre-ordering.</p>
-        </section>
+    <section>
+        <h2>Featured Item</h2>
 
-        <section>
-            <h2>Hours and Location</h2>
-            <p>We are located in the neighborhood and welcome local customers, families, commuters, and event planners.</p>
-            <p>Monday-Friday: 7:00 AM-6:00 PM</p>
-            <p>Saturday: 8:00 AM-4:00 PM</p>
-            <p>Sunday: Closed</p>
-        </section>
-    </main>
+        <picture>
+            <source media="(min-width: 800px)" srcset="bakery-feature-large.jpg">
+            <img src="bakery-feature-small.jpg"
+                 alt="Fresh baked bakery feature item">
+        </picture>
 
-    <footer>
-        <p>&copy; 2026 North Star Bakery</p>
-    </footer>
+        <p>
+            Try one of our fresh bakery favorites, made daily with
+            quality ingredients.
+        </p>
+    </section>
+
+    <section>
+        <h2>Hours and Location</h2>
+        <p>
+            Visit us in the neighborhood for fresh baked goods and
+            friendly service.
+        </p>
+        <p>
+            Monday–Saturday: 7:00 AM–6:00 PM<br>
+            Sunday: 8:00 AM–2:00 PM
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 North Star Bakery</p>
+</footer>
 
 </body>
 </html>

@@ -1,6 +1,5 @@
 /* North Star Bakery - Website Styles */
 
-/* Basic page setup */
 * {
     box-sizing: border-box;
 }
@@ -14,6 +13,7 @@ body {
 }
 
 /* Header */
+
 header {
     background-color: #6B3E26;
     color: #FFF8F0;
@@ -27,6 +27,7 @@ header img {
 }
 
 /* Navigation */
+
 nav ul {
     display: flex;
     flex-direction: column;
@@ -50,6 +51,7 @@ nav a:hover {
 }
 
 /* Main content */
+
 main {
     display: flex;
     flex-direction: column;
@@ -67,6 +69,7 @@ section {
 }
 
 /* Headings */
+
 h1,
 h2 {
     font-family: Georgia, serif;
@@ -82,6 +85,7 @@ h2 {
 }
 
 /* Images */
+
 img,
 picture img {
     max-width: 100%;
@@ -102,12 +106,14 @@ figcaption {
 }
 
 /* Audio */
+
 audio {
     width: 100%;
     margin: 1rem 0;
 }
 
 /* Forms */
+
 form {
     display: flex;
     flex-direction: column;
@@ -164,6 +170,7 @@ input[type="submit"]:hover {
 }
 
 /* Footer */
+
 footer {
     background-color: #6B3E26;
     color: #FFF8F0;
@@ -172,8 +179,10 @@ footer {
     margin-top: 1rem;
 }
 
-/* Larger screens */
+/* Tablet and desktop screens */
+
 @media (min-width: 768px) {
+
     nav ul {
         flex-direction: row;
         justify-content: center;

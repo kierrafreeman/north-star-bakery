@@ -1,203 +1,29 @@
-/* North Star Bakery - Website Styles */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #FFF8F0;
-    color: #2F2A26;
-    line-height: 1.6;
-}
-
-/* Header */
-
-header {
+.favorite-button {
     background-color: #6B3E26;
     color: #FFF8F0;
-    padding: 1rem;
-    text-align: center;
-}
-
-header img {
-    max-width: 180px;
-    height: auto;
-}
-
-/* Navigation */
-
-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0 0;
-}
-
-nav a {
-    display: block;
-    color: #FFF8F0;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem;
-}
-
-nav a:hover {
-    background-color: #D88C5A;
+    border: none;
+    padding: 0.7rem 1rem;
     border-radius: 5px;
-}
-
-/* Main content */
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1.5rem;
-}
-
-section {
-    background-color: #FFF8F0;
-    padding: 1rem;
-    border: 1px solid #D88C5A;
-    border-radius: 8px;
-}
-
-/* Headings */
-
-h1,
-h2 {
-    font-family: Georgia, serif;
-    color: #6B3E26;
-}
-
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-/* Images */
-
-img,
-picture img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 1rem auto;
-    border-radius: 8px;
-}
-
-figure {
-    margin: 1rem 0;
-}
-
-figcaption {
-    text-align: center;
-    font-style: italic;
-    color: #6B3E26;
-}
-
-/* Audio */
-
-audio {
-    width: 100%;
-    margin: 1rem 0;
-}
-
-/* Forms */
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-fieldset {
-    border: 1px solid #D88C5A;
-    border-radius: 8px;
-    padding: 1rem;
-}
-
-legend {
-    font-family: Georgia, serif;
+    cursor: pointer;
     font-weight: bold;
-    color: #6B3E26;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-    margin-top: 0.75rem;
-}
-
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 0.7rem;
-    margin-top: 0.25rem;
-    border: 1px solid #6B3E26;
-    border-radius: 5px;
     font-family: Arial, sans-serif;
     font-size: 1rem;
-    background-color: #FFF8F0;
-    color: #2F2A26;
 }
 
-textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-input[type="submit"] {
-    background-color: #6B3E26;
-    color: #FFF8F0;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-}
-
-input[type="submit"]:hover {
+.favorite-button:hover {
     background-color: #D88C5A;
 }
 
-/* Footer */
-
-footer {
-    background-color: #6B3E26;
-    color: #FFF8F0;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 1rem;
+#favoriteMessage {
+    font-weight: bold;
+    color: #6B3E26;
 }
 
-/* Tablet and desktop screens */
-
-@media (min-width: 768px) {
-
-    nav ul {
-        flex-direction: row;
-        justify-content: center;
-    }
-
-    main {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    main section {
-        flex: 1 1 45%;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-    }
+#nameError,
+#emailError,
+#itemsError {
+    color: #6B3E26;
+    font-weight: bold;
+    display: block;
+    margin-top: 0.25rem;
 }

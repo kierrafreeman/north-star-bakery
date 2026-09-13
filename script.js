@@ -1,5 +1,3 @@
-// North Star Bakery - Touchstone 4 JavaScript
-
 const products = [
     "Signature Loaf",
     "Fresh Pastries",
@@ -7,16 +5,16 @@ const products = [
 ];
 
 const productInfo = {
-    "Signature Loaf": {
-        description: "A fresh handmade loaf baked with care.",
+    loaf: {
+        name: "Signature Loaf",
         price: "$4–$9"
     },
-    "Fresh Pastries": {
-        description: "Fresh pastries baked throughout the day.",
+    pastries: {
+        name: "Fresh Pastries",
         price: "$3–$7"
     },
-    "Celebration Cakes": {
-        description: "Cakes made for birthdays and special events.",
+    cakes: {
+        name: "Celebration Cakes",
         price: "$25–$60"
     }
 };
@@ -27,18 +25,17 @@ function saveFavorite(product) {
     const message = document.getElementById("favoriteMessage");
 
     if (message) {
-        message.textContent =
-            product + " has been saved as your favorite!";
+        message.textContent = "Your favorite is saved: " + product;
     }
 }
 
 function loadFavorite() {
     const favorite = localStorage.getItem("favoriteProduct");
+
     const message = document.getElementById("favoriteMessage");
 
     if (favorite && message) {
-        message.textContent =
-            "Your saved favorite is: " + favorite;
+        message.textContent = "Your saved favorite is: " + favorite;
     }
 }
 
@@ -60,28 +57,25 @@ function validateForm(event) {
     let valid = true;
 
     if (name.value.trim().length < 2) {
-        nameError.textContent =
-            "Please enter your name using at least 2 characters.";
+        nameError.textContent = "Please enter at least 2 characters.";
         valid = false;
     }
 
     if (!email.value.includes("@") || !email.value.includes(".")) {
-        emailError.textContent =
-            "Please enter a valid email address.";
+        emailError.textContent = "Please enter a valid email address.";
         valid = false;
     }
 
     if (items.value.trim().length < 5) {
-        itemsError.textContent =
-            "Please provide at least 5 characters of item details.";
+        itemsError.textContent = "Please enter at least 5 characters.";
         valid = false;
     }
 
     if (valid) {
-        localStorage.setItem("customerName", name.value);
-        localStorage.setItem("customerEmail", email.value);
+        localStorage.setItem("customerName", name.value.trim());
+        localStorage.setItem("customerEmail", email.value.trim());
 
-        alert("Thank you! Your request is ready to be sent.");
+        alert("Your request has been accepted!");
     }
 }
 
@@ -102,21 +96,21 @@ function loadCustomerInformation() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+
     loadFavorite();
     loadCustomerInformation();
 
-    const form = document.querySelector("form");
+    const favoriteButtons = document.querySelectorAll(".favorite-button");
+
+    favoriteButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            saveFavorite(button.getAttribute("data-product"));
+        });
+    });
+
+    const form = document.getElementById("contactForm");
 
     if (form) {
         form.addEventListener("submit", validateForm);
     }
-
-    const favoriteButtons =
-        document.querySelectorAll(".favorite-button");
-
-    favoriteButtons.forEach(function (button) {
-        button.addEventListener("click", function () {
-            saveFavorite(button.dataset.product);
-        });
-    });
 });
